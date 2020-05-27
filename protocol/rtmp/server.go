@@ -16,8 +16,8 @@ type Server struct {
 	AllowClient bool
 }
 
-func NewServer(h av.Handler) Server {
-	return Server{
+func NewServer(h av.Handler) *Server {
+	return &Server{
 		handler:     h,
 		AllowClient: false,
 	}
